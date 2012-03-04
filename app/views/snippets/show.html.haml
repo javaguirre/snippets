@@ -1,0 +1,8 @@
+%h2 Snippet #{@snippet.title}
+
+%p#details
+    = @snippet.content
+%p
+    = @snippet.tag
+%p
+    = link_to 'Back', snippets_path
