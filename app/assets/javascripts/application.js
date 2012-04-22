@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui.min
 //= require rainbow.min
 //= require_tree .

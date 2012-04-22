@@ -1,10 +1,19 @@
 !!! 5
 %html
     %head
-        %title Snippets
+        %title Snippy
         = stylesheet_link_tag 'application'
         = javascript_include_tag 'application'
         = csrf_meta_tags
     %body
-        #content
+        .topbar{:data => {:dropdown => "dropdown"}}
+            .topbar-inner
+                .container
+                    %h2.brand Snippy
+                    %ul.nav
+                        %li.dropdown
+                            %a{:href=> "#tags"} Tags
+                            %ul.dropdown-menu
+                                %li Hola
+        .container
             = yield
