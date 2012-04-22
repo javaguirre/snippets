@@ -1,16 +1,23 @@
-%h2 All Snippets
+%h1 Listing snippets
 
-%table#snippets
-    %thead
-        %tr
-            %th Snippet Title
-            %th Content
-            %th Tag
-    %tbody
-        - @snippets.each do |snippet|
-            %tr
-                %td= snippet.title
-                %td= snippet.content
-                %td= snippet.tag
-                %td= snippet.created_at
-                %td= link_to "More about #{snippet.title}", snippet_path(snippet)
+%table
+  %tr
+    %th Title
+    %th Content
+    %th Tag
+    %th
+    %th
+    %th
+
+  - @snippets.each do |snippet|
+    %tr
+      %td= snippet.title
+      %td= snippet.content
+      %td= snippet.tag
+      %td= link_to 'Show', snippet
+      %td= link_to 'Edit', edit_snippet_path(snippet)
+      %td= link_to 'Destroy', snippet, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Snippet', new_snippet_path
