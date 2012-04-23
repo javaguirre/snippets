@@ -1,8 +1,8 @@
 %table
   %thead
     %tr
-      %th Title
-      %th Tag
+      %th
+      %th
       %th
       %th
       %th
@@ -11,7 +11,9 @@
     - @snippets.each do |snippet|
       %tr
         %td= snippet.title
-        %td= snippet.tag
+        %td
+          %span.label.label-info
+            = snippet.tag
         %td= link_to 'Show', snippet
         %td= link_to 'Edit', edit_snippet_path(snippet)
         %td= link_to 'Destroy', snippet, :confirm => 'Are you sure?', :method => :delete

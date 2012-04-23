@@ -6,14 +6,18 @@
         = javascript_include_tag 'application'
         = csrf_meta_tags
     %body
-        .topbar{:data => {:dropdown => "dropdown"}}
-            .topbar-inner
+        .navbar{:data => {:dropdown => "dropdown"}}
+            .navbar-inner
                 .container
                     %h2.brand Snippy
                     %ul.nav
-                        %li.dropdown
-                            %a{:href=> "#tags"} Tags
-                            %ul.dropdown-menu
-                                %li Hola
+                        %li.active
+                            = link_to 'List', snippets_path
+                    %form.navbar-search.pull-left
+                        %input.search-query.span2
         .container
             = yield
+
+    %br
+    %footer.footer
+        %p Snippy is free Software @javaguirre

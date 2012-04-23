@@ -1,6 +1,6 @@
 = form_for @snippet do |f|
   -if @snippet.errors.any?
-    #error_explanation
+    .alert.alert-error
       %h2= "#{pluralize(@snippet.errors.count, "error")} prohibited this snippet from being saved:"
       %ul
         - @snippet.errors.full_messages.each do |msg|

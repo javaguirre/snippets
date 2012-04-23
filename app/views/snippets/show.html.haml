@@ -1,12 +1,14 @@
-%p#notice= notice
+-if notice
+  %p.alert.alert-info= notice
 
-%p
+%h3
   = @snippet.title
 %p
   %pre{:data => {:language => @snippet.tag}}
     = @snippet.content
 %p
-  = @snippet.tag
+  %span.label.label-info
+    = @snippet.tag
 
 = link_to 'Edit', edit_snippet_path(@snippet)
 \|
