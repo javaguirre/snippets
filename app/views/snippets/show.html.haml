@@ -7,7 +7,7 @@
   %pre{:data => {:language => @snippet.tag}}
     = @snippet.content
 %p
-  %span.label.label-info
+  %span.label
     = @snippet.tag
 
 = link_to 'Edit', edit_snippet_path(@snippet)

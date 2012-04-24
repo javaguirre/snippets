@@ -3,7 +3,7 @@ class SnippetsController < ApplicationController
   # GET /snippets.json
   def index
     if params[:tag]
-      @snippet = Snippet.where(:tag => params[:tag]).all
+      @snippets = Snippet.where(:tag => params[:tag]).all
     else
       @snippets = Snippet.all
     end
