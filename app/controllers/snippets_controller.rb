@@ -29,6 +29,7 @@ public
   # GET /snippets/1
   # GET /snippets/1.json
   def show
+    @languages = ["c", "python", "css", "html", "javascript", "php", "lua", "ruby", "scheme"]
     @snippet = Snippet.find(params[:id])
 
     respond_to do |format|
